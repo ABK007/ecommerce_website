@@ -8,7 +8,7 @@ function Navbar() {
       <div className="container pl-[7%] pr-[4%] pt-6 mx-auto flex items-center justify-between space-x-[8vw]">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/next.svg" alt="Logo" width={100} height={100} />
+          <Image src="/dine_logo.png" alt="Logo" width={100} height={100} />
         </Link>
 
         {/* Desktop Menu */}
