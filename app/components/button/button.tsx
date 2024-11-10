@@ -4,7 +4,7 @@ import Image from "next/image";
 function Button() {
   return (
     <>
-      <button className="font-semibold px-[60px] py-[18px] bg-[#212121] text-white flex items-center gap-2">
+      <button className="font-semibold px-[60px] py-[18px] bg-[#212121] text-white flex items-center gap-2 w-fit">
         <Image
           src="/cart-shopping-solid.svg"
           alt="shopping cart"
