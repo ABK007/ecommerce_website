@@ -7,7 +7,7 @@ import PdpButton from "../pdpButton/pdpbutton";
 
 
 // client side api calling
-function productCard() {
+function ProductCard() {
   const [product, setProducts] = useState([]);
   useEffect(() => {
     async function fetchData() {
@@ -49,7 +49,7 @@ function productCard() {
   );
 }
 
-export default productCard;
+export default ProductCard;
 
 /////////////////////////////////////////////
 

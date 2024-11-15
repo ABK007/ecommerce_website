@@ -1,7 +1,6 @@
 import Navbar from "@/app/components/navbar/navbar";
 import React from "react";
 import Image from "next/image";
-import PdpButton from "@/app/components/pdpButton/pdpbutton";
 import Button from "@/app/components/button/button";
 
 async function fetchProduct(id: string) {
