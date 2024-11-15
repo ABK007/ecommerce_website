@@ -1,6 +1,7 @@
 export type ButtonContent = {
   text: string;
   icon: string;
+  url: string;
 };
 
 export type Product = {

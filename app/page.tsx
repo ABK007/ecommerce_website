@@ -36,7 +36,7 @@ export default function Home() {
             wear dine outfits.
           </p>
 
-          <Button text="Start Shopping" icon="yes" />
+          <Button text="Start Shopping" icon="yes" url="/productlist"/>
 
           <div className="flex items-center space-x-14 pt-[80px]">
             <Image
@@ -250,7 +250,7 @@ export default function Home() {
                 The Natural color is the actual natural color of the fiber,
                 undyed and 100% traceable.
               </p>
-              <Button text="See All Products" icon="no" />
+              <Button text="See All Products" icon="no" url="/productlist" />
             </div>
           </div>
         </div>
