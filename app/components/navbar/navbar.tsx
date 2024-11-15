@@ -5,9 +5,10 @@ import Image from "next/image";
 function Navbar() {
   return (
     <nav>
-      <div className="container pl-[7%] pr-[4%] pt-6 mx-auto flex items-center justify-between space-x-[8vw]">
+      {/* Desktop Navbar */}
+      <div className="flex pl-[7%] pr-[4%] pt-6 mx-auto items-center justify-between space-x-[8vw]">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="">
           <Image src="/dine_logo.png" alt="Logo" width={100} height={100} />
         </Link>
 
@@ -25,7 +26,6 @@ function Navbar() {
           <Link href="#" className="">
             All Products
           </Link>
-
         </div>
 
         {/* Search Bar */}

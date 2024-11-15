@@ -1,13 +1,21 @@
+"use client"
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { Sora } from "next/font/google";
 import Navbar from "./components/navbar/navbar";
 import Button from "./components/button/button";
+import Footer from "./components/footer/footer";
+import {useRouter} from "next/navigation";
 
 const sora = Sora({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
+  const navigate=(name: string) => {
+    router.push(name)
+  }
+
   return (
     <main className={sora.className}>
       <Navbar />
@@ -28,7 +36,7 @@ export default function Home() {
             wear dine outfits.
           </p>
 
-          <Button />
+          <Button text="Start Shopping" icon="yes" />
 
           <div className="flex items-center space-x-14 pt-[80px]">
             <Image
@@ -242,7 +250,7 @@ export default function Home() {
                 The Natural color is the actual natural color of the fiber,
                 undyed and 100% traceable.
               </p>
-              <Button />
+              <Button text="See All Products" icon="no" />
             </div>
           </div>
         </div>
@@ -269,49 +277,17 @@ export default function Home() {
               placeholder="Input email address"
               className="w-[300px] px-4 py-1 rounded text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 border-2"
             />
-            <button className="font-semibold px-[20px] py-[5px] bg-[#212121] text-white flex items-center gap-2 w-fit">
+            <button onClick= {()=> navigate("/products")} className="font-semibold px-[20px] py-[5px] bg-[#212121] text-white flex items-center gap-2 w-fit">
               Get Started
             </button>
           </div>
         </div>
       </div>
-      {/* Subscribe Newsletter Section */}
+      {/* Footer Section */}
 
-      <div className="container pl-[7%] pr-[4%] w-full pb-[100px] grid grid-cols-5 grid-rows-1 text-[#666666]">
-        <div className="flex flex-col gap-10 col-span-2 items-start pr-10">
-          <Image src="/dine_logo.png" alt="" width={180} height={30} />
-          <p className="text-[400] text-[16px] leading-[22px] ">
-            Small, artisan label that offers a thoughtfully curated collection
-            of high quality everyday essentials made.
-          </p>
-          <div className="flex  gap-5">
-          <Image src="/twitter.svg" alt="" width={50} height={50} className="px-4 py-3 bg-slate-200 rounded-lg"/>
-          <Image src="/facebook.svg" alt="" width={50} height={50} className="px-5 py-3 bg-slate-200 rounded-lg"/>
-          <Image src="/linkedin.svg" alt="" width={50} height={50} className="px-4 py-3 bg-slate-200 rounded-lg"/>
-          </div>
-        </div>
-        <div className="flex flex-col gap-5">
-          <h2 className="font-[700] text-xl">Company</h2>
-          <h2>About</h2>
-          <h2>Terms of Use</h2>
-          <h2>Privacy Policy</h2>
-          <h2>How It Works</h2>
-          <h2>Contact Us</h2>
-        </div>
+      <Footer />
 
-        <div className="flex flex-col gap-5">
-          <h2 className="font-[700] text-xl">Support</h2>
-          <h2>Support Carrier</h2>
-          <h2>24h Service</h2>
-          <h2>Quick Chat</h2>
-        </div>
-
-        <div className="flex flex-col gap-5">
-          <h2 className="font-[700] text-xl">Contact</h2>
-          <h2>Whatsapp</h2>
-          <h2>24h Service</h2>
-        </div>
-      </div>
+      
     </main>
   );
 }
